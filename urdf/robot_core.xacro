@@ -16,7 +16,7 @@
         <parent link="base_link" />
         <child  link="LeftWheel_link" />
         <axis   xyz="0 0 1" />
-        <origin xyz="0 0.2626 0" rpy="-${pi/2} 0 0" />
+        <origin xyz="0 0.244 0" rpy="-${pi/2} 0 0" />
     </joint>
 
 
@@ -34,7 +34,7 @@
         <parent link="base_link" />
         <child  link="RightWheel_link" />
         <axis   xyz="0 0 1" />
-        <origin xyz="0 -0.2626 0" rpy="${pi/2} 0 0" />
+        <origin xyz="0 -0.244 0" rpy="${pi/2} 0 0" />
     </joint>
 
 
