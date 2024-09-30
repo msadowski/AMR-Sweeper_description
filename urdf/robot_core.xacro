@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>           
+                <mesh   filename="file://$(find AMR-Sweeper)/meshes/BottomAssembly/MotorAssembly.stl" 
+                        scale="0.001 0.001 0.001" />  
+            </geometry>     
+        </visual>
+    </link>
+
+
+    <joint name="LeftWheel_joint" type="continuous">
+        <parent link="base_link" />
+        <child  link="LeftWheel_link" />
+        <axis   xyz="0 0 1" />
+        <origin xyz="0 0.2626 0" rpy="-${pi/2} 0 0" />
+    </joint>
+
+
+    <link name="LeftWheel_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh   filename="file://$(find AMR-Sweeper)/meshes/BottomAssembly/WheelAssembly.stl" 
+                        scale="0.001 0.001 0.001" />  
+            </geometry>       
+        </visual>
+    </link>
+
+
+    <joint name="RightWheel_joint" type="continuous">
+        <parent link="base_link" />
+        <child  link="RightWheel_link" />
+        <axis   xyz="0 0 1" />
+        <origin xyz="0 -0.2626 0" rpy="${pi/2} 0 0" />
+    </joint>
+
+
+    <link name="RightWheelAssembly_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh   filename="file://$(find AMR-Sweeper)/meshes/BottomAssembly/WheelAssembly.stl" 
+                        scale="0.001 0.001 0.001" />  
+            </geometry>       
+        </visual>
+    </link>
+
+
+</robot>
