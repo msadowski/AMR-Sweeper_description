@@ -6,8 +6,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>           
-                <mesh   filename="file://$(find AMR-Sweeper)/meshes/BottomAssembly/MotorAssembly.stl" 
-                        scale="0.001 0.001 0.001" />  
+                <mesh   filename="file://$(find AMR-Sweeper)/meshes/BottomAssembly/MotorAssembly.stl" />  
             </geometry>     
         </visual>
     </link>
@@ -25,8 +24,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh   filename="file://$(find AMR-Sweeper)/meshes/BottomAssembly/WheelAssembly.stl" 
-                        scale="0.001 0.001 0.001" />  
+                <mesh   filename="file://$(find AMR-Sweeper)/meshes/BottomAssembly/WheelAssembly.stl" />  
             </geometry>       
         </visual>
     </link>
@@ -44,8 +42,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh   filename="file://$(find AMR-Sweeper)/meshes/BottomAssembly/WheelAssembly.stl" 
-                        scale="0.001 0.001 0.001" />  
+                <mesh   filename="file://$(find AMR-Sweeper)/meshes/BottomAssembly/WheelAssembly.stl" />  
             </geometry>       
         </visual>
     </link>
