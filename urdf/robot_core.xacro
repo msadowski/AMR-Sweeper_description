@@ -23,7 +23,7 @@
 
     <link name="LeftWheel_link">
         <visual>
-            <origin xyz="0 0 0" rpy="-${pi/2} 0 0"/>
+            <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <geometry>
                 <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/WheelAssembly/WheelAssembly.stl" />  
             </geometry>       
