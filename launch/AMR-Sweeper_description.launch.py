@@ -14,7 +14,8 @@ def generate_launch_description():
 
 
     # Use xacro to process the file
-    xacro_file = os.path.join(get_package_share_directory(package_name),package_urdf)
+    pkg_path = os.path.join(get_package_share_directory(package_name)
+    xacro_file = os.path.join(pkg_path,'urdf',package_urdf)
     robot_description_raw = xacro.process_file(xacro_file).toxml()
 
 
