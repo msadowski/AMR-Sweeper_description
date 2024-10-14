@@ -24,7 +24,7 @@ def generate_launch_description():
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
-        parameters=[{'AMR-Sweeper_description': robot_description_raw}]
+        parameters=[{'robot_description': robot_description_raw}]
     )
 
 
