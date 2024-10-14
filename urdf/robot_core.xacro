@@ -4,7 +4,7 @@
 
     <link name="base_link">
         <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0.130" rpy="0 0 0"/>
             <geometry>           
                 <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Chassis/Chassis.stl" />  
             </geometry>     
