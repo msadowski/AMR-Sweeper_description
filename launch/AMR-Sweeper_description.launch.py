@@ -10,7 +10,7 @@ def generate_launch_description():
 
     # The name of the package and path to xacro file within the package
     package_name = 'AMR-Sweeper_description'
-    package_urdf = 'AMR-Sweeper_description/AMR-Sweeper.urdf.xacro'
+    package_urdf = 'AMR-Sweeper_description/urdf/AMR-Sweeper.urdf.xacro'
 
 
     # Use xacro to process the file
