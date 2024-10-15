@@ -2,9 +2,12 @@
 
 import os
 from ament_index_python.packages import get_package_share_directory
+
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
+
 from launch_ros.actions import Node
 
 
@@ -23,17 +26,36 @@ def generate_launch_description():
     )
 
 
+
+
+    #Path to world file
+    default_world = os.path.join(
+        get_package_share_directory(package_name),
+        'worlds',
+        'empty.world'
+    )
+
+    world = LaunchConfiguration('world')
+
+    world_arg = DeclareLaunchArgument(
+        'world',
+        default_value=default_world,
+        description='World to load'
+    )
+
+
     # Include Gazebo launch file
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('ros_gz_sim'), 'launch', 'gazebo.launch.py')]),
+            get_package_share_directory('ros_gz_sim'), 'launch', 'gz_sim.launch.py')]),
+        launch_arguments={'gz_args':['-r -v4 ', world], 'on_exit_shutdown' : 'true'}.items()
     )
 
 
     # Spawn Sweepe in Gazebo
     spawn_AMRSweeper_sim = Node(                                #note AMR-Sweeper name without "-" due to python
-        package='gazebo_ros', executable='spawn_entity.py',
-        arguments=['-topic', 'robot_description', '-entity', 'AMR-Sweeper_description'],
+        package='ros_gz_sim', executable='create',
+        arguments=['-topic', 'robot_description', '-name', 'AMR-Sweeper_description'],
         output='screen'
     )
 
@@ -57,6 +79,7 @@ def generate_launch_description():
     # Run all
     return LaunchDescription([
         AMRSweeper_sim_launch,                      #note AMR-Sweeper name without "-"
+        world_arg,
         gazebo,
         spawn_AMRSweeper_sim,                       #note AMR-Sweeper name without "-"
         diff_drive_spawner,
