@@ -61,19 +61,19 @@ def generate_launch_description():
 
 
     # Configure the differential driver controller manager spawner node
-    diff_drive_spawner = Node(
-        package='controller_manager',
-        executable='spawner.py',
-        arguments=["diff_cont"]
-    )
+    #diff_drive_spawner = Node(
+    #    package='controller_manager',
+    #    executable='create.py',
+    #    arguments=["diff_cont"]
+    #)
 
 
     # Configure the joint broadcaster spawner node
-    joint_broad_spawner = Node(
-        package='controller_manager',
-        executable='spawner.py',
-        arguments=["joint_broad"]
-    )
+    #joint_broad_spawner = Node(
+    #    package='controller_manager',
+    #    executable='create.py',
+    #    arguments=["joint_broad"]
+    #)
 
 
     # Run all
