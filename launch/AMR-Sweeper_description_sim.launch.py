@@ -60,19 +60,19 @@ def generate_launch_description():
 
 
     # Configure the differential driver controller manager spawner node
-    #diff_drive_spawner = Node(
-    #    package='controller_manager',
-    #    executable='spawner',
-    #    arguments=["diff_cont"]
-    #)
+    diff_drive_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=["diff_cont"]
+    )
 
 
     # Configure the joint broadcaster spawner node
-    #joint_broad_spawner = Node(
-    #    package='controller_manager',
-    #    executable='create.py',
-    #    arguments=["joint_broad"]
-    #)
+    joint_broad_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=["joint_broad"]
+    )
 
 
     # Run all
@@ -81,6 +81,6 @@ def generate_launch_description():
         world_arg,
         gz_sim,
         spawn_AMRSweeper_sim,                       #note AMR-Sweeper name without "-"
-    #    diff_drive_spawner,
-    #    joint_broad_spawner
+        diff_drive_spawner,
+        joint_broad_spawner
     ])
