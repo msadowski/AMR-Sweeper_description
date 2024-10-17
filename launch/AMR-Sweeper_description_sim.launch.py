@@ -62,7 +62,7 @@ def generate_launch_description():
     # Configure the differential driver controller manager spawner node
     #diff_drive_spawner = Node(
     #    package='controller_manager',
-    #    executable='create.py',
+    #    executable='spawner',
     #    arguments=["diff_cont"]
     #)
 
