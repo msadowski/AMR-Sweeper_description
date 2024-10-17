@@ -27,7 +27,6 @@ def generate_launch_description():
 
 
 
-
     #Path to world file
     default_world = os.path.join(
         get_package_share_directory(package_name),
@@ -45,17 +44,17 @@ def generate_launch_description():
 
 
     # Include Gazebo launch file
-    gazebo = IncludeLaunchDescription(
+    gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('ros_gz_sim'), 'launch', 'gz_sim.launch.py')]),
-        launch_arguments={'gz_args':['-r -v4 ', world], 'on_exit_shutdown' : 'true'}.items()
-    )
+        launch_arguments={'gz_args':['-r -v4 ', world], 'on_exit_shutdown': 'true'}.items()
+   )
 
 
     # Spawn Sweepe in Gazebo
     spawn_AMRSweeper_sim = Node(                                #note AMR-Sweeper name without "-" due to python
         package='ros_gz_sim', executable='create',
-        arguments=['-topic', 'robot_description', '-name', 'AMR-Sweeper_description'],
+        arguments=['-topic', 'robot_description', '-name', 'AMR-Sweeper_description', '-z', '0.13'],
         output='screen'
     )
 
@@ -80,7 +79,7 @@ def generate_launch_description():
     return LaunchDescription([
         AMRSweeper_sim_launch,                      #note AMR-Sweeper name without "-"
         world_arg,
-        gazebo,
+        gz_sim,
         spawn_AMRSweeper_sim,                       #note AMR-Sweeper name without "-"
     #    diff_drive_spawner,
     #    joint_broad_spawner
