@@ -22,7 +22,7 @@ def generate_launch_description():
     AMRSweeper_sim_launch = IncludeLaunchDescription(           #note AMR-Sweeper name without "-" due to python
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory(package_name), 'launch', 'AMR-Sweeper_description.launch.py')]), 
-        launch_arguments={'use_sim_time': 'true'}.items()
+        launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'false'}.items()
     )
 
 
@@ -75,6 +75,24 @@ def generate_launch_description():
     )
 
 
+    bridge_params = os.path.join(get_package_share_directory(package_name), 'config', 'gz_bridge.yaml')
+    ros_gz_bridge = Node(
+        package="ros_gz_bridge",
+        executable="parameter_bridge",
+        arguments=[
+            '--ros-args' ,
+            '-p' ,
+            f'config_file:={bridge_params}',
+        ]
+    )
+
+    ros_gz_image_bridge = Node(
+        package="ros_gz_image",
+        executable="image_bridge",
+        arguments=["/camera/image_raw"]
+    )
+
+
     # Run all
     return LaunchDescription([
         AMRSweeper_sim_launch,                      #note AMR-Sweeper name without "-"
@@ -82,5 +100,7 @@ def generate_launch_description():
         gz_sim,
         spawn_AMRSweeper_sim,                       #note AMR-Sweeper name without "-"
         diff_drive_spawner,
-        joint_broad_spawner
+        joint_broad_spawner,
+        ros_gz_bridge,
+        ros_gz_image_bridge
     ])
