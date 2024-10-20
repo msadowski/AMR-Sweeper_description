@@ -26,6 +26,14 @@ def generate_launch_description():
     )
 
 
+    twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
+    twist_mux = Node(
+            package="twist_mux",
+            executable="twist_mux",
+            parameters=[twist_mux_params, {'use_sim_time': True}],
+            remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
+        )
+
 
     #Path to world file
     default_world = os.path.join(
@@ -80,8 +88,8 @@ def generate_launch_description():
         package="ros_gz_bridge",
         executable="parameter_bridge",
         arguments=[
-            '--ros-args' ,
-            '-p' ,
+            '--ros-args ',
+            '-p ',
             f'config_file:={bridge_params}',
         ]
     )
@@ -96,6 +104,7 @@ def generate_launch_description():
     # Run all
     return LaunchDescription([
         AMRSweeper_sim_launch,                      #note AMR-Sweeper name without "-"
+        twist_mux,
         world_arg,
         gz_sim,
         spawn_AMRSweeper_sim,                       #note AMR-Sweeper name without "-"
