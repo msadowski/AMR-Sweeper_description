@@ -35,7 +35,7 @@ def generate_launch_description():
         )
 
 
-    #Path to world file
+    #Path to world file[spawner_joint_broad]: waiting for service /controller_manager/list_controllers to become available...
     default_world = os.path.join(
         get_package_share_directory(package_name),
         'worlds',
@@ -88,8 +88,8 @@ def generate_launch_description():
         package="ros_gz_bridge",
         executable="parameter_bridge",
         arguments=[
-            '--ros-args ',
-            '-p ',
+            '--ros-args',
+            '-p',
             f'config_file:={bridge_params}',
         ]
     )
