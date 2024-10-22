@@ -29,14 +29,14 @@ def generate_launch_description():
 
     # Set Robot State Publisher node parameters
     robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=', use_ros2_control, ' sim_mode:=', use_sim_time])
-    params = {'robot_description': robot_description_config, 'use_sim_time': use_sim_time}
+    rsp_params = {'robot_description': robot_description_config, 'use_sim_time': use_sim_time}
 
     # Configure the state publisher node
     node_robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
-        parameters=[params]
+        parameters=[rsp_params]
     )
 
 

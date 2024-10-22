@@ -80,12 +80,6 @@ def generate_launch_description():
         ]
     )
 
-    ros_gz_image_bridge = Node(
-        package="ros_gz_image",
-        executable="image_bridge",
-        arguments=["/camera/image_raw"]
-    )
-
 
     # Run all
     return LaunchDescription([
@@ -94,6 +88,5 @@ def generate_launch_description():
         world_arg,
         gz_sim,
         spawn_AMRSweeper_sim,                       #note AMR-Sweeper name without "-"
-        ros_gz_bridge,
-        ros_gz_image_bridge
+        ros_gz_bridge
     ])
