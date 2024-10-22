@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <gazebo>
-        <plugin name="gz::sim::systems::DiffDrive" filename="gz-sim-diff-drive.so">
+        <plugin name="gz::sim::systems::DiffDrive" filename="gz-sim-diff-drive-system">
 
             <!-- Wheel Information -->
             <left_joint>LeftWheel_joint</left_joint>

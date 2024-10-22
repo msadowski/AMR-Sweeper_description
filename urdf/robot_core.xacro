@@ -3,6 +3,16 @@
 
 
     <link name="base_link">
+    </link>
+
+
+    <joint name="Chassis_joint" type="fixed">
+        <parent link="base_link" />
+        <child  link="Chassis_link" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="Chassis_link">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>           

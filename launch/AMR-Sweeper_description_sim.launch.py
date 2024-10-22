@@ -18,10 +18,10 @@ def generate_launch_description():
     package_name = 'AMR-Sweeper_description'
     
 
-    # Launch AMR-Sweeper
-    AMRSweeper_sim_launch = IncludeLaunchDescription(           #note AMR-Sweeper name without "-" due to python
+    # Launch AMR-Sweeper Robot State Publisher with sim_time=true and ros2_control=false
+    sim_launch = IncludeLaunchDescription(           
         PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory(package_name), 'launch', 'AMR-Sweeper_description.launch.py')]), 
+            get_package_share_directory(package_name), 'launch', 'AMR-Sweeper_rsp.launch.py')]), 
         launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'false'}.items()
     )
 
@@ -33,6 +33,7 @@ def generate_launch_description():
             parameters=[twist_mux_params, {'use_sim_time': True}],
             remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
         )
+
 
 
     #Path to world file[spawner_joint_broad]: waiting for service /controller_manager/list_controllers to become available...
@@ -67,21 +68,6 @@ def generate_launch_description():
     )
 
 
-    # Configure the differential driver controller manager spawner node
-    diff_drive_spawner = Node(
-        package='controller_manager',
-        executable='spawner',
-        arguments=["diff_cont"]
-    )
-
-
-    # Configure the joint broadcaster spawner node
-    joint_broad_spawner = Node(
-        package='controller_manager',
-        executable='spawner',
-        arguments=["joint_broad"]
-    )
-
 
     bridge_params = os.path.join(get_package_share_directory(package_name), 'config', 'gz_bridge.yaml')
     ros_gz_bridge = Node(
@@ -103,13 +89,11 @@ def generate_launch_description():
 
     # Run all
     return LaunchDescription([
-        AMRSweeper_sim_launch,                      #note AMR-Sweeper name without "-"
+        sim_launch,                      
         twist_mux,
         world_arg,
         gz_sim,
         spawn_AMRSweeper_sim,                       #note AMR-Sweeper name without "-"
-        diff_drive_spawner,
-        joint_broad_spawner,
         ros_gz_bridge,
         ros_gz_image_bridge
     ])
