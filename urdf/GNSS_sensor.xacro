@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+<!-- GNSS Sensor -->
+    <joint name="GNSS_joint" type="fixed">
+        <parent link="base_link" />
+        <child  link="GNSS_link" />
+        <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    </joint>
+
+    <link name="GNSS_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>           
+            <!--    <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Sensors/GNSS.stl" />  -->
+            <box size="0.010 0.03 0.03"/>
+            </geometry>
+            <material name="black"/>     
+        </visual>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>           
+            <!--    <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Sensors/GNSS.stl" />  -->
+            <box size="0.010 0.03 0.03"/>
+            </geometry>     
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0" />
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+    </link>
+
+
+<gazebo reference="GNSS_link">
+    <sensor name="gnss_sensor" type="gps">
+        <always_on>true</always_on>
+        <update_rate>1.0</update_rate>
+        <plugin name="gps_controller" filename="libgazebo_ros_gps_sensor.so">
+            <ros>
+                <remapping>gps_controller/out:=gps</remapping>
+            </ros>
+            <frame_name>GNSS_link</frame_name>
+        </plugin>
+    </sensor>
+</gazebo>
+
+
+
+</robot>
