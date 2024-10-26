@@ -18,7 +18,8 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>           
                 <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Chassis/Chassis.stl" />  
-            </geometry>     
+            </geometry>   
+            <material name="grey"/>     
         </visual>
 
         <collision>
@@ -50,7 +51,8 @@
             <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <geometry>
                 <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/WheelAssembly/WheelAssembly.stl" />  
-            </geometry>       
+            </geometry>
+            <material name="yellow"/>       
         </visual>
 
         <collision>
@@ -82,7 +84,8 @@
             <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <geometry>
                 <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/WheelAssembly/WheelAssembly.stl" />  
-            </geometry>       
+            </geometry>
+            <material name="yellow"/>       
         </visual>
 
         <collision>
@@ -112,7 +115,8 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>           
             <!--    <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Sensors/GNSS.stl" />  -->
-            </geometry>     
+            </geometry>
+            <material name="black"/>     
         </visual>
 
         <collision>
