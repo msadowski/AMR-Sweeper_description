@@ -28,12 +28,22 @@ def generate_launch_description():
 
     twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
     twist_mux = Node(
-            package="twist_mux",
-            executable="twist_mux",
-            parameters=[twist_mux_params, {'use_sim_time': True}],
-            remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
-        )
+        package="twist_mux",
+        executable="twist_mux",
+        parameters=[twist_mux_params, {'use_sim_time': True}],
+        remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
+    )
 
+
+    # Open RVIZ2
+    rviz2_params = os.path.join(get_package_share_directory(package_name),'config','rviz2_config.rviz')
+    rviz2 = Node(                                
+        package='rviz2',
+        namespace='', 
+        executable='rviz2',
+        name='rviz2',
+        arguments=['-d', rviz2_params]   
+    )
 
 
     #Path to world file[spawner_joint_broad]: waiting for service /controller_manager/list_controllers to become available...
@@ -62,7 +72,8 @@ def generate_launch_description():
 
     # Spawn Sweepe in Gazebo
     spawn_AMRSweeper_sim = Node(                                #note AMR-Sweeper name without "-" due to python
-        package='ros_gz_sim', executable='create',
+        package='ros_gz_sim', 
+        executable='create',
         arguments=['-topic', 'robot_description', '-name', 'AMR-Sweeper_description', '-z', '0.13'],
         output='screen'
     )
@@ -85,6 +96,7 @@ def generate_launch_description():
     return LaunchDescription([
         sim_launch,                      
         twist_mux,
+        rviz2,
         world_arg,
         gz_sim,
         spawn_AMRSweeper_sim,                       #note AMR-Sweeper name without "-"

@@ -101,6 +101,33 @@
 
 
 
+    <joint name="GNSS_joint" type="fixed">
+        <parent link="base_link" />
+        <child  link="GNSS_link" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="GNSS_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>           
+            <!--    <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Sensors/GNSS.stl" />  -->
+            </geometry>     
+        </visual>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>           
+            <!--    <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Sensors/GNSS.stl" />  -->
+            </geometry>     
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0" />
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+    </link>
 
 
 

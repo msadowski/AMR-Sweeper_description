@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+
+
+<!-- GNSS Sensor -->
+<gazebo>
+    <sensor name="gnss_sensor" type="gps">
+        <always_on>true</always_on>
+        <update_rate>1.0</update_rate>
+        <plugin name="gps_controller" filename="libgazebo_ros_gps_sensor.so">
+            <ros>
+                <remapping>gps_controller/out:=gps</remapping>
+            </ros>
+            <frame_name>GNSS_link</frame_name>
+        </plugin>
+    </sensor>
+</gazebo>
+
+
+
+</robot>
