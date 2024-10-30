@@ -22,6 +22,13 @@
             name="gz::sim::systems::SceneBroadcaster">
         </plugin>
     
+        <!-- NavSat sensor-->
+         <plugin
+            filename="gz-sim-navsat-system"
+            name="gz::sim::systems::NavSat">
+        </plugin>
+
+
         <light type="directional" name="sun">
             <cast_shadows>true</cast_shadows>
             <pose>0 0 10 0 0 0</pose>
