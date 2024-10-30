@@ -21,7 +21,7 @@ def generate_launch_description():
     # Launch AMR-Sweeper Robot State Publisher with sim_time=true and ros2_control=false
     sim_launch = IncludeLaunchDescription(           
         PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory(package_name), 'launch', 'AMR-Sweeper_rsp.launch.py')]), 
+            get_package_share_directory(package_name), 'launch', 'rsp.launch.py')]), 
         launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'false'}.items()
     )
 
