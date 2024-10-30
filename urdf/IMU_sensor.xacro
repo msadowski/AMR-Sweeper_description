@@ -18,6 +18,10 @@
             <update_rate>1</update_rate>
             <visualize>true</visualize>
             <topic>imu</topic>
+            <plugin 
+                filename="gz-sim-imu-system"
+                name="gz::sim::systems::Imu">
+            </plugin>
         </sensor>
     </gazebo>
 
