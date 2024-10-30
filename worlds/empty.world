@@ -24,8 +24,8 @@
     
         <!-- NavSat sensor-->
          <plugin
-            filename="gz-sim-navsat-system"
-            name="gz::sim::systems::NavSat">
+            filename="ignition-gazebo-navsat-system"
+            name="ignition::gazebo::systems::NavSat">
         </plugin>
 
 
