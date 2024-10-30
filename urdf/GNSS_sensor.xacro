@@ -35,7 +35,10 @@
         <navsat>
             <position_sensing>
                 <horizontal>
-                    <noise type="gaussian">
+                    <noise 
+                        type="gaussian"
+                        mean="0.2"
+                        stddev="0.1">
                     </noise>
                 </horizontal>
             </position_sensing>
