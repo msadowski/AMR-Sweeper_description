@@ -41,7 +41,14 @@
                     </noise>
                 </horizontal>
             </position_sensing>
-
+            <velocity_sensing>
+                <horizontal>
+                    <noise type="gaussian">
+                        <mean>0.0</mean>
+                        <stddev>0.01</stddev>
+                    </noise>
+                </horizontal>
+            </velocity_sensing>
         </navsat>       
         <plugin 
             filename="gz-sim-navsat-system"
