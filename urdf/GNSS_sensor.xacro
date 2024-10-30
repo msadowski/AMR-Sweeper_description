@@ -36,8 +36,8 @@
             <position_sensing>
                 <horizontal>
                     <noise type="gaussian">
-                        <mean>0.2</mean>
-                        <stddev>0.1</stddev>
+                        <mean>0.0</mean>
+                        <stddev>0.01</stddev>
                     </noise>
                 </horizontal>
             </position_sensing>
