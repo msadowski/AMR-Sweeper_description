@@ -33,11 +33,39 @@
         <update_rate>1.0</update_rate>
         <topic>sensor_msgs/msg/navsat</topic>
         <navsat>
-            <noise type="gaussian">
-                <mean>0.2</mean>
-                <stddev>0.1</stddev>
-            </noise>
-        </navsat>        
+            <position_sensing>
+                <horizontal>
+                    <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.0</stddev>
+                    </noise>
+                </horizontal>
+                <vertical>
+                    <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.0</stddev>
+                    </noise>
+                </vertical>
+            </position_sensing>
+            <velocity_sensing>
+                <horizontal>
+                    <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.0</stddev>
+                    </noise>
+                </horizontal>
+                <vertical>
+                    <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.0</stddev>
+                    </noise>
+                </vertical>
+            </velocity_sensing>
+        </navsat>       
         <plugin 
             filename="gz-sim-navsat-system"
             name="gz::sim::systems::NavSat">
