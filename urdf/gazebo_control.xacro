@@ -2,14 +2,15 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <gazebo>
-        <plugin name="gz::sim::systems::DiffDrive" filename="gz-sim-diff-drive-system">
+        <plugin 
+            filename="gz-sim-diff-drive-system"
+            name="gz::sim::systems::DiffDrive" >
 
             <!-- Wheel Information -->
             <left_joint>LeftWheel_joint</left_joint>
             <right_joint>RightWheel_joint</right_joint>
             <wheel_separation>0.244</wheel_separation>
             <wheel_radius>0.130</wheel_radius>
-
 
             <!-- Limits -->
             <max_wheel_torque>200</max_wheel_torque>
@@ -28,8 +29,10 @@
             <tf_topic>/tf</tf_topic>
         </plugin>
 
-        <plugin filename="gz-sim-joint-state-publisher-system" 
-              name="gz::sim::systems::JointStatePublisher">
+
+        <plugin 
+            filename="gz-sim-joint-state-publisher-system" 
+            name="gz::sim::systems::JointStatePublisher">
                 <topic>joint_states</topic>
                 <joint_name>LeftWheel_joint</joint_name>
                 <joint_name>RightWheel_joint</joint_name>
