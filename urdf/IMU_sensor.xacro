@@ -9,7 +9,7 @@
         <origin xyz="0.3 0 0.1" rpy="0 0 0"/>
     </joint>
 
-    <link name="GNSS_link">
+    <link name="IMU_link">
     </link>
 
 
