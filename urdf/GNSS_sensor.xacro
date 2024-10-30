@@ -35,7 +35,7 @@
         <navsat>
             <position_sensing>
                 <horizontal>
-                    <noise type="none">
+                    <noise type="gaussian">
                     </noise>
                 </horizontal>
             </position_sensing>
