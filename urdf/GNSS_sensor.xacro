@@ -27,11 +27,6 @@
 
     </link>
 
-    <!-- NavSat sensor-->
-    <plugin
-        filename="gz-sim-navsat-system"
-        name="gz::sim::systems::NavSat">
-    </plugin>
 
 <gazebo reference="GNSS_link">
     <sensor name="gnss_sensor" type="gps">
