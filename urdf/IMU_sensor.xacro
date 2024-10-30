@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+<!-- IMU Sensor -->
+    <joint name="IMU_joint" type="fixed">
+        <parent link="base_link" />
+        <child  link="IMU_link" />
+        <origin xyz="0.3 0 0.1" rpy="0 0 0"/>
+    </joint>
+
+    <link name="GNSS_link">
+    </link>
+
+
+
+</robot>
