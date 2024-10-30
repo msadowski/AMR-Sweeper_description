@@ -36,34 +36,20 @@
             <position_sensing>
                 <horizontal>
                     <noise>
-                    <type>gaussian</type>
-                    <mean>0.0</mean>
-                    <stddev>0.0</stddev>
+                        <type>gaussian</type>
+                        <mean>0.0</mean>
+                        <stddev>0.0</stddev>
                     </noise>
                 </horizontal>
-                <vertical>
-                    <noise>
-                    <type>gaussian</type>
-                    <mean>0.0</mean>
-                    <stddev>0.0</stddev>
-                    </noise>
-                </vertical>
             </position_sensing>
             <velocity_sensing>
                 <horizontal>
                     <noise>
-                    <type>gaussian</type>
-                    <mean>0.0</mean>
-                    <stddev>0.0</stddev>
+                        <type>gaussian</type>
+                        <mean>0.0</mean>
+                        <stddev>0.0</stddev>
                     </noise>
                 </horizontal>
-                <vertical>
-                    <noise>
-                    <type>gaussian</type>
-                    <mean>0.0</mean>
-                    <stddev>0.0</stddev>
-                    </noise>
-                </vertical>
             </velocity_sensing>
         </navsat>       
         <plugin 
