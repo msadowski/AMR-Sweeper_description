@@ -26,8 +26,10 @@
     <link name="camera_link_optical"></link>
 
 
-<!--
+
     <gazebo reference="camera_link">
+
+<!--
         <sensor name="camera" type="depth_camera">
             <camera>
                 <camera_info_topic>camera/camera_info</camera_info_topic>
@@ -49,16 +51,14 @@
             <gz_frame_id>camera_link_optical</gz_frame_id>
         </sensor>
  
-
-
-            <plugin 
-                filename="gz-sim-depth-camera-system"
-                name="gz::sim::systems::DepthCamera">
-                <gz_frame_id>camera_link_optical</gz_frame_id>
-                <min_depth>0.1</min_depth>
-                <max_depth>100.0</max_depth>
-            </plugin>
-  -->
+        <plugin 
+            filename="gz-sim-depth-camera-system"
+            name="gz::sim::systems::DepthCamera">
+            <gz_frame_id>camera_link_optical</gz_frame_id>
+            <min_depth>0.1</min_depth>
+            <max_depth>100.0</max_depth>
+        </plugin>
+-->
 
         <sensor name="camera" type="camera">
             <pose> 0 0 0 0 0 0 </pose>
@@ -78,6 +78,7 @@
                 </clip>
             </camera>
             <topic>camera/image_raw</topic>
+
         </sensor>
  
 
