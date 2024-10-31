@@ -4,26 +4,12 @@
 
 <!-- IMU Sensor -->
     <joint name="IMU_joint" type="fixed">
-        <parent link="base_link" />
+        <parent link="Tool_link" />
         <child  link="IMU_link" />
-        <origin xyz="0.3 0 0.1" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
 
     <link name="IMU_link">
-        <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>           
-                <box size="0.010 0.03 0.5"/>
-            </geometry>
-            <material name="black"/>     
-        </visual>
-
-        <collision>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>           
-                <box size="0.010 0.03 0.5"/>
-            </geometry>     
-        </collision>
     </link>
 
     <gazebo reference="IMU_link">
