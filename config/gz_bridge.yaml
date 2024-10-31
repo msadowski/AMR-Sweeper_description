@@ -49,7 +49,7 @@
 
   # gz topic published by Sensors plugin (GNSS)
 - ros_topic_name: "sensor_msgs/msg/navsat"
-  gz_topic_name: "sensor_msgs/msg/navsat"
+  gz_topic_name: "navsat"
   ros_type_name: "sensor_msgs/msg/NavSatFix"
   gz_type_name: "gz.msgs.NavSat"
   direction: GZ_TO_ROS
