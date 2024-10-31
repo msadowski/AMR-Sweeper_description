@@ -27,7 +27,7 @@
 
 
 
-    <gazebo reference="camera_link_optical">
+    <gazebo reference="camera_link">
         <sensor name="depth_camera" type="depth_camera">
             <update_rate>10</update_rate>
             <topic>depth_camera</topic>
@@ -46,8 +46,8 @@
         </sensor>
     </gazebo>
 
-
-<!--        <sensor name="camera" type="camera">
+    <gazebo reference="camera_link">
+        <sensor name="camera" type="camera">
             <pose> 0 0 0 0 0 0 </pose>
             <visualize>true</visualize>
             <update_rate>10</update_rate>
@@ -66,7 +66,6 @@
             </camera>
             <topic>camera/image_raw</topic>
         </sensor>
--->
-    
+    </gazebo>
 
 </robot>
