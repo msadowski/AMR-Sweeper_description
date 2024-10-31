@@ -47,6 +47,10 @@
             <update_rate>10</update_rate>
             <visualize>true</visualize>
             <topic>camera/image_raw</topic>
+        </sensor>
+ 
+<!--
+
             <plugin 
                 filename="gz-sim-depth-camera-system"
                 name="gz::sim::systems::DepthCamera">
@@ -54,9 +58,8 @@
                 <min_depth>0.1</min_depth>
                 <max_depth>100.0</max_depth>
             </plugin>
-        </sensor>
- 
-<!--
+
+
         <sensor name="camera" type="camera">
             <pose> 0 0 0 0 0 0 </pose>
             <visualize>true</visualize>
