@@ -114,9 +114,9 @@
 
 
     <joint name="Tool_joint" type="revolute">
+        <origin xyz="0.33 0 0.075" rpy="0 0 0" />
         <parent link="Chassis_link" />
         <child  link="Tool_link" />
-        <origin xyz="0.33 0 0.075" rpy="0 0 0" />
         <axis   xyz="1 0 0" />
         <limit  lower="-${pi/18}" upper="${pi/18}" velocity="100" effort="100"/>  
     </joint>
