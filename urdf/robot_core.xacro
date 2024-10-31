@@ -71,7 +71,7 @@
         </collision>
 
         <inertial>
-            <origin xyz="0 0.1 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <mass value="1.5" />
             <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.02" iyz="0" izz="0.01" />
         </inertial>
@@ -104,11 +104,44 @@
         </collision>
 
         <inertial>
-            <origin xyz="0 0.1 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <mass value="1.5" />
             <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.02" iyz="0" izz="0.01" />
         </inertial>
     </link>
 
+
+
+
+    <joint name="Tool_joint" type="revolute">
+        <parent link="base_link" />
+        <child  link="Tool_link" />
+        <origin xyz="0 0 0.155" rpy="0 0 0" />
+        <axis   xyz="1 0 0" />
+        <limit  lower="-${pi/18}" upper="${pi/18}"/>
+    </joint>
+
+    <link name="Tool_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Tool/Tool.stl" />  
+            </geometry>
+            <material name="black"/>       
+        </visual>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Tool/Tool.stl" />  
+            </geometry>       
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="2.5" />
+            <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.02" iyz="0" izz="0.01" />
+        </inertial>
+    </link>
 
 </robot>
