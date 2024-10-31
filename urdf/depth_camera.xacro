@@ -15,7 +15,7 @@
             <material name="red"/>
         </visual>
 
-    <gazebo reference="camera_link">
+
         <sensor name="depth_camera" type="depth_camera">
             <update_rate>10</update_rate>
             <topic>depth_camera</topic>
@@ -32,9 +32,9 @@
                 </clip>
             </camera>
         </sensor>
-    </gazebo>
 
-    <gazebo reference="camera_link">
+
+ 
         <sensor name="camera" type="camera">
             <pose> 0 0 0 0 0 0 </pose>
             <visualize>true</visualize>
@@ -54,7 +54,7 @@
             </camera>
             <topic>camera/image_raw</topic>
         </sensor>
-    </gazebo>
+
 
     </link>
 
