@@ -50,8 +50,8 @@
   # gz topic published by Sensors plugin (Depth Camera)
 - ros_topic_name: "depth_camera/points"
   gz_topic_name: "depth_camera/points"
-  ros_type_name: "sensor_msgs/msg/PointCloud2"
-  gz_type_name: "gz.msgs.PointCloud2"
+  ros_type_name: "sensor_msgs/msg/PointCloud"
+  gz_type_name: "gz.msgs.PointCloud"
   direction: GZ_TO_ROS
 
 
