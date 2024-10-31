@@ -47,6 +47,14 @@
   direction: GZ_TO_ROS
 
 
+  # gz topic published by Sensors plugin (Depth Camera)
+- ros_topic_name: "depth_camera/points"
+  gz_topic_name: "depth_camera/points"
+  ros_type_name: "sensor_msgs/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloud2"
+  direction: GZ_TO_ROS
+
+
   # gz topic published by Sensors plugin (GNSS)
 - ros_topic_name: "sensor_msgs/msg/navsat"
   gz_topic_name: "navsat"
