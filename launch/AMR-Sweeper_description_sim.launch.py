@@ -74,7 +74,7 @@ def generate_launch_description():
     spawn_AMRSweeper_sim = Node(                                #note AMR-Sweeper name without "-" due to python
         package='ros_gz_sim', 
         executable='create',
-        arguments=['-topic', 'robot_description', '-name', 'AMR-Sweeper_description', '-z', '0.13'],
+        arguments=['-topic', 'robot_description', '-name', 'AMR-Sweeper_description', '-z', '0.0'],
         output='screen'
     )
 
