@@ -14,12 +14,6 @@
             </geometry>
             <material name="red"/>
         </visual>
-    </link>
-
-
-
-
-
 
     <gazebo reference="camera_link">
         <sensor name="depth_camera" type="depth_camera">
@@ -61,6 +55,15 @@
             <topic>camera/image_raw</topic>
         </sensor>
     </gazebo>
+
+    </link>
+
+
+
+
+
+
+
 
     <joint name="camera_optical_joint" type="fixed">
         <parent link="camera_link"/>
