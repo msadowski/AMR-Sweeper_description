@@ -27,7 +27,7 @@
 
 
 
-    <gazebo reference="camera_link">
+    <gazebo reference="camera_link_optical">
         <sensor name="depth_camera" type="depth_camera">
             <update_rate>10</update_rate>
             <topic>depth_camera</topic>
