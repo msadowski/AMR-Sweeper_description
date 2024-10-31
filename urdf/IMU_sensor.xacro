@@ -10,6 +10,20 @@
     </joint>
 
     <link name="IMU_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>           
+                <box size="0.010 0.03 0.5"/>
+            </geometry>
+            <material name="black"/>     
+        </visual>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>           
+                <box size="0.010 0.03 0.5"/>
+            </geometry>     
+        </collision>
     </link>
 
     <gazebo reference="IMU_link">
