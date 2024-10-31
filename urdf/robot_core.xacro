@@ -114,7 +114,7 @@
 
 
     <joint name="Tool_joint" type="revolute">
-        <parent link="base_link" />
+        <parent link="Chassis_link" />
         <child  link="Tool_link" />
         <origin xyz="0.33 0 0.075" rpy="0 0 0" />
         <axis   xyz="1 0 0" />
