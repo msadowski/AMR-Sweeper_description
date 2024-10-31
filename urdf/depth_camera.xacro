@@ -42,10 +42,10 @@
                     <near>0.05</near>
                     <far>8.0</far>
                 </clip>
-                <always_on>1</always_on>
-                <update_rate>30</update_rate>
-                <visualize>true</visualize>
             </camera>
+            <always_on>1</always_on>
+            <update_rate>30</update_rate>
+            <visualize>true</visualize>
             <topic>camera/image_raw</topic>
             <plugin 
                 filename="gz-sim-depth_camera-system"
