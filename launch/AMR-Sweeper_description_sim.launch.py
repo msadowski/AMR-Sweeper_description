@@ -36,14 +36,14 @@ def generate_launch_description():
 
 
     # Open RVIZ2
-    rviz2_params = os.path.join(get_package_share_directory(package_name),'config','rviz2_config.rviz')
-    rviz2 = Node(                                
-        package='rviz2',
-        namespace='', 
-        executable='rviz2',
-        name='rviz2',
-        arguments=['-d', rviz2_params]   
-    )
+#    rviz2_params = os.path.join(get_package_share_directory(package_name),'config','rviz2_config.rviz')
+#    rviz2 = Node(                                
+#        package='rviz2',
+#        namespace='', 
+#        executable='rviz2',
+#        name='rviz2',
+#        arguments=['-d', rviz2_params]   
+#    )
 
 
     #Path to world file[spawner_joint_broad]: waiting for service /controller_manager/list_controllers to become available...
@@ -103,7 +103,7 @@ def generate_launch_description():
     return LaunchDescription([
         sim_launch,                      
         twist_mux,
-        rviz2,
+#        rviz2,
         world_arg,
         gz_sim,
         spawn_AMRSweeper_sim,                       #note AMR-Sweeper name without "-"
