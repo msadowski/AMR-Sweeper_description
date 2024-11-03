@@ -29,14 +29,14 @@
             </geometry>   
             <material name="grey"/>     
         </visual>
-
+<!--
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>           
                 <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Chassis/Chassis.stl" />  
             </geometry>     
         </collision>
-
+-->
         <inertial>
             <origin xyz="0.054 0 0.110" rpy="0 0 0"/>
             <mass value="15.4" />
@@ -66,7 +66,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <geometry>
-                <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/WheelAssembly/WheelAssembly.stl" />  
+                <cylinder radius="0.130" length="0.08"/>
             </geometry>       
         </collision>
 
@@ -99,7 +99,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <geometry>
-                <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/WheelAssembly/WheelAssembly.stl" />  
+                <cylinder radius="0.130" length="0.08"/>
             </geometry>       
         </collision>
 
@@ -129,13 +129,6 @@
             </geometry>
             <material name="black"/>       
         </visual>
-
-        <collision>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>
-                <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Tool/Tool.stl" />  
-            </geometry>       
-        </collision>
 
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
