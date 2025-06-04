@@ -73,6 +73,10 @@ Currently it's for Gazebo sim. If you use traditional Gazebo (gazebo-classic, su
 ```
 to:
 ```
+<plugin
+            filename="ignition-gazebo-diff-drive-system"
+            name="ignition::gazebo::systems::DiffDrive">
+
 ```
 
 
