@@ -2,7 +2,10 @@
 
 This repository provides the full URDF (Unified Robot Description Format) files for the AMR-Sweeper robot, designed for autonomous cleaning operations. It includes 3D models, configuration files, and launch scripts to facilitate simulation and integration within a ROS 2 environment.
 
+
+
 ## Features
+![structure](https://github.com/user-attachments/assets/c968ac2e-3a3e-4bcd-a6e1-c69000b22b92)
 
 - URDF model of the AMR-Sweeper robot
 - Simulation-ready launch files for Gazebo
