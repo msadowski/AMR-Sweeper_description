@@ -13,7 +13,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>           
-            <mesh   filename="file://$(find AMR-Sweeper_description)/meshes/Sensors/GNSS.stl" />
+            <mesh   filename="package://AMR-Sweeper_description/meshes/Sensors/GNSS.stl" />
             </geometry>
             <material name="black"/>     
         </visual>
