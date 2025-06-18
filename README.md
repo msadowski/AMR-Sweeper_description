@@ -89,7 +89,7 @@ To launch the robot's description in RViz:
 
 
 ```bash
-ros2 launch AMR-Sweeper_description AMR-Sweeper_description.launch.py
+ros2 launch AMR-Sweeper_description rsp.launch.py
 ```
 
 
