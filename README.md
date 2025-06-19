@@ -103,6 +103,13 @@ ros2 launch AMR-Sweeper_description AMR-Sweeper_description_sim.launch.py
 ```
 
 
+If you want to see `/robot_description`, it's not a regular ROS topic, but a ROS parameter passed to the node:
+```
+ros2 param get /robot_state_publisher robot_description
+```
+
+
+
 ## Folder Structure
 
 The repository is organized as follows:
