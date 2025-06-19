@@ -2,13 +2,15 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
-  <joint name="IMU_joint" type="fixed">
-      <parent link="Tool_link" />
-      <child  link="IMU_link" />
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-  </joint>
+<!-- IMU Sensor -->
+    <joint name="IMU_joint" type="fixed">
+        <parent link="Tool_link" />
+        <child  link="IMU_link" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
 
-  <link name="IMU_link"/>
+    <link name="IMU_link">Add commentMore actions
+    </link>
 
 
     <gazebo reference="IMU_link">
