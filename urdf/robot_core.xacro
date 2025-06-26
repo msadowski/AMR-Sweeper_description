@@ -24,17 +24,17 @@
     <link name="Chassis_link">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>           
-                <mesh   filename="package://AMR-Sweeper_description/meshes/Chassis/Chassis.stl" />  
-            </geometry>   
-            <material name="grey"/>     
+            <geometry>
+                <mesh   filename="$(find amr_sweeper_description)/meshes/Chassis/Chassis.stl" />
+            </geometry>
+            <material name="grey"/>
         </visual>
 <!--
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>           
-                <mesh   filename="package://AMR-Sweeper_description/meshes/Chassis/Chassis.stl" />  
-            </geometry>     
+            <geometry>
+                <mesh   filename="$(find amr_sweeper_description)/meshes/Chassis/Chassis.stl" />
+            </geometry>
         </collision>
 -->
         <inertial>
@@ -58,16 +58,16 @@
         <visual>
             <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <geometry>
-                <mesh   filename="package://AMR-Sweeper_description/meshes/WheelAssembly/WheelAssembly.stl" />  
+                <mesh   filename="$(find amr_sweeper_description)/meshes/WheelAssembly/WheelAssembly.stl" />
             </geometry>
-            <material name="yellow"/>       
+            <material name="yellow"/>
         </visual>
 
         <collision>
             <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <geometry>
-                <mesh   filename="package://AMR-Sweeper_description/meshes/WheelAssembly/WheelAssembly.stl" />
-            </geometry>       
+                <mesh   filename="$(find amr_sweeper_description)/meshes/WheelAssembly/WheelAssembly.stl" />
+            </geometry>
         </collision>
 
         <inertial>
@@ -91,16 +91,16 @@
         <visual>
             <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <geometry>
-                <mesh   filename="package://AMR-Sweeper_description/meshes/WheelAssembly/WheelAssembly.stl" />  
+                <mesh   filename="$(find amr_sweeper_description)/meshes/WheelAssembly/WheelAssembly.stl" />
             </geometry>
-            <material name="yellow"/>       
+            <material name="yellow"/>
         </visual>
 
         <collision>
             <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <geometry>
-                <mesh   filename="package://AMR-Sweeper_description/meshes/WheelAssembly/WheelAssembly.stl" />
-            </geometry>       
+                <mesh   filename="$(find amr_sweeper_description)/meshes/WheelAssembly/WheelAssembly.stl" />
+            </geometry>
         </collision>
 
         <inertial>
@@ -125,9 +125,9 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh   filename="package://AMR-Sweeper_description/meshes/Tool/Tool.stl" />  
+                <mesh   filename="$(find amr_sweeper_description)/meshes/Tool/Tool.stl" />
             </geometry>
-            <material name="black"/>       
+            <material name="black"/>
         </visual>
 
         <inertial>
@@ -149,16 +149,16 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh   filename="package://AMR-Sweeper_description/meshes/Tool/Brush.stl" />  
+                <mesh   filename="$(find amr_sweeper_description)/meshes/Tool/Brush.stl" />
             </geometry>
-            <material name="red"/>       
+            <material name="red"/>
         </visual>
 
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh   filename="package://AMR-Sweeper_description/meshes/Tool/Brush.stl" />  
-            </geometry>       
+                <mesh   filename="$(find amr_sweeper_description)/meshes/Tool/Brush.stl" />
+            </geometry>
         </collision>
 
         <inertial>
@@ -180,16 +180,16 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh   filename="package://AMR-Sweeper_description/meshes/Tool/Brush.stl" />  
+                <mesh   filename="$(find amr_sweeper_description)/meshes/Tool/Brush.stl" />
             </geometry>
-            <material name="red"/>       
+            <material name="red"/>
         </visual>
 
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh   filename="package://AMR-Sweeper_description/meshes/Tool/Brush.stl" />  
-            </geometry>       
+                <mesh   filename="$(find amr_sweeper_description)/meshes/Tool/Brush.stl" />
+            </geometry>
         </collision>
 
         <inertial>

@@ -12,10 +12,10 @@
     <link name="GNSS_link">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>           
-            <mesh   filename="package://AMR-Sweeper_description/meshes/Sensors/GNSS.stl" />
+            <geometry>
+            <mesh   filename="$(find amr_sweeper_description)/meshes/Sensors/GNSS.stl" />
             </geometry>
-            <material name="black"/>     
+            <material name="black"/>
         </visual>
     </link>
 
@@ -42,8 +42,8 @@
                     </noise>
                 </horizontal>
             </velocity_sensing>
-        </navsat>       
-        <plugin 
+        </navsat>
+        <plugin
             filename="gz-sim-navsat-system"
             name="gz::sim::systems::NavSat">
         </plugin>
